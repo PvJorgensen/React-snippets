@@ -1,0 +1,13 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 12fr;
+  *{
+    // border: 1px solid black;
+  }
+}
