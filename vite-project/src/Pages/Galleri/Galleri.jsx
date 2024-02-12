@@ -1,6 +1,9 @@
+import { Gallery } from "../../Components/Galleri/Galleri"
 
 export const Galleri = () => {
   return (
-    <div>Galleri</div>
+    <>
+    <Gallery />
+    </>
   )
 }
