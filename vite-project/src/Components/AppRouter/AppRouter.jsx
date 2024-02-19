@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom"
 
 import { Home } from "../../Pages/Home/Home"
 import { Loader } from "../../Pages/Loader/Loader"
-import { Galleri } from "../../Pages/Galleri/Galleri"
+import { Galleri } from "../../Components/Galleri/Webshop"
 import { PageNotFound } from "../../Pages/PageNotFound/PageNotFound"
 export const AppRouter = () => {
   return (

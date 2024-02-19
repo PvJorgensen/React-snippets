@@ -1,71 +1,91 @@
-.PostersWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 100px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 3rem;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.indhold {
+.webshopContainer {
     position: relative;
-    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
-.indhold img {
-    max-width: 300px;
-    width: 100%;
-    padding: 0;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    border: 1px solid black;
-    box-shadow: 2px 5px 10px;
-    cursor: pointer; /* Add cursor pointer to indicate clickable */
-}
-
-.modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cartToggleBtn {
     position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-}
-
-.modalContent {
-    position: relative;
-}
-
-.modalContent img {
-    max-width: 90vw; /* Adjust the max-width as needed */
-    max-height: 90vh; /* Adjust the max-height as needed */
-    border: 2px solid white; /* Example border */
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
     color: white;
-    font-size: 30px;
+    border: none;
+    padding: 8px 16px;
     cursor: pointer;
+    z-index: 1000; /* Ensure the button appears on top of other elements */
 }
 
-@media screen and (max-width: 768px) {
-    .PostersWrapper {
-        grid-template-columns: 1fr 1fr;
-    }
+.cartModal {
+    position: fixed;
+    top: 50px; /* Adjust as needed */
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-height: calc(100vh - 100px); /* Make the cart modal scrollable */
+    overflow-y: auto; /* Enable vertical scrolling */
+    z-index: 1000; /* Ensure the modal appears on top of other elements */
 }
 
-@media screen and (max-width: 480px) {
-    .PostersWrapper {
-        grid-template-columns: 1fr;
-    }
+.cartItems {
+    margin-bottom: 10px;
+}
+
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc; /* Add separation line */
+}
+
+.cartItem:last-child {
+    border-bottom: none; /* Remove border bottom for last item */
+}
+
+.cartItem p {
+    margin: 0;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 1fr 1fr 1fr layout */
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.productHighlighted {
+    border: 2px solid #007bff;
+    padding: 20px; /* Increase padding for highlighted product */
+    transition: all 0.3s ease; /* Add smooth transition */
+    grid-column: span 3; /* Span all three columns */
+}
+
+.productHighlighted:hover {
+    transform: scale(1.05); /* Add scale effect on hover */
+}
+
+.productHighlighted h2 {
+    font-size: 18px; /* Increase font size for heading */
+}
+
+.productHighlighted p {
+    font-size: 16px; /* Increase font size for price */
+    font-weight: bold; /* Make price bold */
+}
+
+.product button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
 }

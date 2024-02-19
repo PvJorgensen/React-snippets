@@ -1,9 +1,9 @@
-import { Gallery } from "../../Components/Galleri/Galleri"
+import { Gallery } from "../../Components/Galleri/Webshop"
 
 export const Galleri = () => {
   return (
     <>
-    <Gallery />
+    <Webshop />
     </>
   )
 }
